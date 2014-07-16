@@ -6,3 +6,11 @@ def add_user(email, password)
 
   @database_connection.sql(query)
 end
+
+def get_emails
+  query = <<-QUERY
+    SELECT email FROM users
+  QUERY
+
+  @database_connection.sql(query)
+end

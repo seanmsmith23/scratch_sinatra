@@ -1,5 +1,9 @@
-<% if flash[:notice] %>
-<h1><%= flash[:notice] %></h1>
-<% end %>
+<div class="wrapper">
+  <h1 style="text-align: center">Funtacular Awesome App</h1>
 
-<%= yield %>
+  <% if flash[:notice] %>
+  <p style="color: green"><%= flash[:notice] %></p>
+  <% end %>
+
+  <%= yield %>
+</div>

@@ -26,4 +26,9 @@ class App < Sinatra::Application
 
     redirect "/"
   end
+
+  get "/emails" do
+    emails = get_emails
+    erb :emails, locals: {:emails => emails}
+  end
 end
